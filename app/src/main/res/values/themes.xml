@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Openinapp_Assignment" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">@color/white</item>
+
+    </style>
+
+
+    <style name="Theme.Openinapp_Assignment" parent="Base.Theme.Openinapp_Assignment" />
+</resources>
