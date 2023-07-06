@@ -17,6 +17,6 @@ class TokenManager @Inject constructor(@ApplicationContext context: Context) {
     }
 
     fun getToken(): String? {
-        return pref.getString(TOKEN_KEY, null)
+        return pref.getString(TOKEN_KEY, "")
     }
 }

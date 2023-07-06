@@ -30,6 +30,7 @@ class LinkInfoAdapter(private val context: Context, private val list: List<LinkI
         val data = list[position]
         holder.binding.linkInfo = data
         Glide.with(context).load(data.original_image).centerCrop().into(holder.binding.ivImg)
+
     }
 
     override fun getItemCount(): Int {

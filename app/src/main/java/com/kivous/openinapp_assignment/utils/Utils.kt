@@ -1,11 +1,23 @@
 package com.kivous.openinapp_assignment.utils
 
+import android.app.Application
+import android.content.Context
 import android.icu.text.SimpleDateFormat
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
+import android.net.NetworkCapabilities.TRANSPORT_CELLULAR
+import android.net.NetworkCapabilities.TRANSPORT_ETHERNET
+import android.net.NetworkCapabilities.TRANSPORT_WIFI
 import android.os.Build
+import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.fragment.app.Fragment
+import dagger.hilt.android.internal.Contexts.getApplication
+import dagger.hilt.android.qualifiers.ApplicationContext
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.Locale
+import javax.inject.Inject
 
 @RequiresApi(Build.VERSION_CODES.O)
 object Utils {
@@ -54,6 +66,10 @@ object Utils {
         }
         return dateList
 
+    }
+
+    fun Fragment.toast(msg: String) {
+        Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()
     }
 
 }
